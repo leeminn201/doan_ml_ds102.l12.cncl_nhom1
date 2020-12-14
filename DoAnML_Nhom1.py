@@ -24,7 +24,7 @@ from sklearn.naive_bayes import MultinomialNB
 
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn import metrics
-from sklearn.metrics import classification_report, confusion_matrixaccuracy_score
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 """Import thư viện và gán giá trị nhãn real: 1, fake: 0 và xử lí column."""
 
@@ -95,10 +95,7 @@ vec = TfidfVectorizer(binary=True, use_idf=True)
 X_train = vec.fit_transform(X_train) 
 X_test = vec.transform(X_test)
 
-"""**Chạy một trong 4 thuận toán train model.**"""
-
-#Support Vector classifier
-model = SVC()
+"""**Chạy một trong 3 thuận toán train model.**"""
 
 #Logistic Regression Classifier
 model = LogisticRegression(random_state=0)
